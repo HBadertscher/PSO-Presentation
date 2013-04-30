@@ -1,7 +1,8 @@
 \documentclass{beamer}
 \usetheme{Hannover}
 \usecolortheme{rose}
-
+\usepackage[utf8]{inputenc} 
+\usepackage[english, ngerman]{babel}
 
 \title{Particle Swarm Optimization}
 \author[Badertscher, Dengler]{Hannes Badertscher, Gregor Dengler}
@@ -30,13 +31,10 @@
 		\tableofcontents[currentsection]
 	\end{frame}
   
-	\begin{frame}
-	    \frametitle{This is the first slide}
-    \end{frame}
-  
-	\begin{frame}
-	    \frametitle{This is the second slide}
-	    \framesubtitle{A bit more information about this}   
-  	\end{frame}
+	\input{sections/Einfuehrung.tex}
+	\input{sections/Algorithmus.tex}
+	\input{sections/Detailbetrachtungen.tex}
+	\input{sections/Anwendungen.tex}
+	\input{sections/Code.tex}
 
 \end{document}
