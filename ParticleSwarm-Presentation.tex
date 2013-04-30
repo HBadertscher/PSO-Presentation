@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\usetheme{Hannover}
+\usecolortheme{rose}
+
+
+\title{Particle Swarm Optimization}
+\author[Badertscher, Dengler]{Hannes Badertscher, Gregor Dengler}
+\date [MathSem, FS13]{MathSem, \today}
+
+
+% Aufzählungen immer schrittweise zeigen:
+\beamerdefaultoverlayspecification{<+->}
+% Gliederung am Anfang jedes unterabschnittes anzeigen:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Gliederung}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+  
+	\begin{frame}
+	    \frametitle{This is the first slide}
+    \end{frame}
+  
+	\begin{frame}
+	    \frametitle{This is the second slide}
+	    \framesubtitle{A bit more information about this}   
+  	\end{frame}
+
+\end{document}
