@@ -1,3 +1,47 @@
 \begin{frame}
 	\frametitle{Partikelschwarm Algorithmus}
+	
+	\section[Algorithmus]{Partikelschwarm Algorithmus}
+	Zustandsdaten jedes Partikels:
+	\begin{align*}
+		x_i: \: \: & \text{aktuelle Position}\\
+		v_i: \: \: & \text{aktuelle Geschwindigkeit}\\
+		p_i: \: \: & \text{Persönlich beste Position} \\
+		l_i: \: \: & \text{Beste Position des Schwarms}
+	\end{align*}
+	
+
+	Initialisierung:
+	\begin{align*}
+		x_i(0) &= U(min,max) \\
+		v_i(0) &= U(min - x_i(0), max - x_i(0)) \\
+		p_i(0) &= x_i(0)
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Partikelschwarm Algorithmus}
+	Geschwindigkeits- und Positions-Update:
+	\begin{align*}
+		v_i(t+1) &= w v_i(t) \\
+				&+ U(0,c_1) \left(p_i(t)-x_i(t) \right) \\
+				&+ U(0,c_2) \left(l_i(t)-x_i(t) \right) \\
+		x_{i}(t+1) &= x_i(t) + v_i(t+1)
+	\end{align*}
+
+	\begin{align*}
+		w &: \text{Intertia Weight} \\
+		c_1 &: \text{Cognitive Factor} \\
+		c_2 &: \text{Social Factor} \\
+		U(a,b) &: \text{Random Number between a,b}
+	\end{align*}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Partikelschwarm Algorithmus}
+	Visualisierung
+	\begin{figure}[htbp]
+		\input{tikz/new-velocity}
+	\end{figure}
 \end{frame}
