@@ -1,3 +1,56 @@
-\begin{frame}
-	\frametitle{Detailbetrachtungen}
+\section{Schwarm-Topologien}
+\begin{frame}{Schwarm-Topologien}
+	\begin{figure}[htbp]
+		\centering
+		\begin{minipage}{4cm}
+			\centering
+			\input{tikz/gbest}
+			GBest
+		\end{minipage}
+		\begin{minipage}{4cm}
+			\centering
+			\input{tikz/lbest-ring}
+			LBest - Ring
+		\end{minipage}
+		\begin{minipage}{4cm}
+			\centering
+			\input{tikz/lbest-wheel}
+			LBest - Wheel
+		\end{minipage}
+		\begin{minipage}{4cm}
+			\centering
+			\input{tikz/lbest-neumann}
+			LBest - Von Neumann
+		\end{minipage}
+	\end{figure}		
+\end{frame}
+
+\section[Zielgebiet]{Einschränkung des Zielgebiets}
+\begin{frame}{Einschränkung des Zielgebiets}
+	
+\end{frame}
+
+\section[Geschwindigkeit]{Maximale Geschwindigkeit}
+\begin{frame}{Maximale Geschwindigkeit}
+	\begin{itemize}
+		\item Schnell hohe Geschwindigkeiten
+		\item Lösungsansatz: Maximale Geschwindigkeit $V_{max,j}$
+			\begin{equation*}
+				v_{ij}(t+1) = 
+				\begin{cases}
+					v_{ij}(t+1) & \text{if} |v_{ij}(t+1)| < V_{max,j} \\
+					V_{max,j} & \text{if} |v_{ij}(t+1)| \geq V_{max,j}
+				\end{cases}
+			\end{equation*} 
+	\end{itemize}
+\end{frame}
+
+\section[Abbruch-kriterien]{Abbruchkriterien}
+\begin{frame}{Abbruchkriterien}
+	\begin{itemize}
+		\item Maximale Anzahl Iterationen
+		\item Schwellwert für Fitnesswert
+		\item Schwellwert für Änderung der Funktionswerte
+		\item Schwellwert für Bewegungsbereich
+	\end{itemize}
 \end{frame}
