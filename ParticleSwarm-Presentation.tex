@@ -20,7 +20,7 @@
 % Aufzählungen immer schrittweise zeigen:
 \beamerdefaultoverlayspecification{<+->}
 % Gliederung am Anfang jedes unterabschnittes anzeigen:
-\AtBeginSubsection[]
+\AtBeginSection[]
 {
   \begin{frame}<beamer>
     \frametitle{Gliederung}
@@ -32,11 +32,6 @@
 
 	\begin{frame}
 		\titlepage
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Table of Contents}
-		\tableofcontents[currentsection]
 	\end{frame}
   
 	\input{sections/Einfuehrung.tex}
