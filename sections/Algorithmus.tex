@@ -1,6 +1,8 @@
 \section[Algorithmus]{Partikelschwarm Algorithmus}
 \begin{frame}{Partikelschwarm Algorithmus}
-	Zustandsdaten jedes Partikels:
+\begin{itemize}
+
+	\item Zustandsdaten jedes Partikels:
 	\begin{align*}
 		x_i: \: \: & \text{aktuelle Position}\\
 		v_i: \: \: & \text{aktuelle Geschwindigkeit}\\
@@ -9,35 +11,46 @@
 	\end{align*}
 	
 
-	Initialisierung:
+	\item Initialisierung:
 	\begin{align*}
 		x_i(0) &= U(min,max) \\
 		v_i(0) &= U(min - x_i(0), max - x_i(0)) \\
 		p_i(0) &= x_i(0)
 	\end{align*}
-	
+
+\end{itemize}	
 \end{frame}
 
 \begin{frame}{Partikelschwarm Algorithmus}
-	Geschwindigkeits- und Positions-Update:
+\begin{itemize}
+	\item Positions-Update: 
+	\begin{align*}
+		x_{i}(t+1) &= x_i(t) + v_i(t+1)
+	\end{align*}
+	
+	\item Geschwindigkeits-Update:
 	\begin{align*}
 		v_i(t+1) &= w v_i(t) \\
 				&+ U(0,c_1) \left(p_i(t)-x_i(t) \right) \\
-				&+ U(0,c_2) \left(l_i(t)-x_i(t) \right) \\
-		x_{i}(t+1) &= x_i(t) + v_i(t+1)
+				&+ U(0,c_2) \left(l_i(t)-x_i(t) \right)
 	\end{align*}
-
+	
+	\item Faktoren: 
 	\begin{align*}
 		w &: \text{Intertia Weight} \\
 		c_1 &: \text{Cognitive Factor} \\
 		c_2 &: \text{Social Factor} \\
 		U(a,b) &: \text{Random Number between a,b}
-	\end{align*}	
+	\end{align*}
+\end{itemize}	
 \end{frame}
 
 \begin{frame}{Partikelschwarm Algorithmus}
-	Visualisierung
-	\begin{figure}[htbp]
-		\input{tikz/new-velocity}
-	\end{figure}
+	\begin{itemize}
+		\item Visualisierung
+			\only<1>{\begin{figure}[htbp]
+				\input{tikz/new-velocity}
+			\end{figure}}
+		\item Einfaches Beispiel
+	\end{itemize}
 \end{frame}
